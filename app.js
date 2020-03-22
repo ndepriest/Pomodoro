@@ -23,14 +23,14 @@ function startTimer(duration) {
   }, 1000);
 }
 
-    rl.question('Please enter timer duration FOR WORK in minutes! ', (minutes1) => {
-      var time = parseInt(minutes1, 10) * 60;
+    rl.question('Please enter timer duration FOR WORK in minutes! ', (minutesOne) => {
+      var time = parseInt(minutesOne, 10) * 60;
       startTimer(time);
-      console.log(`Work Time: ${minutes1}`)
+      console.log(`Work Time: ${minutesOne}`)
     });
 
-    rl.question('Please enter timer duration FOR BREAK in minutes! ', (minutes2) => {
-      var time = parseInt(minutes2, 10) * 60;
+    rl.question('Please enter timer duration FOR BREAK in minutes! ', (minutesTwo) => {
+      var time = parseInt(minutesTwo, 10) * 60;
       startTimer(time);
-      console.log(`Break Time: ${minutes2}`)
+      console.log(`Break Time: ${minutesTwo}`)
     });
