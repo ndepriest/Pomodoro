@@ -7,6 +7,7 @@ const rl = readline.createInterface({
 
 function startTimer(duration) {
   setInterval(function () {
+    if (duration >= 0) {
     var minutes = parseInt(duration / 60, 10);
     var seconds = parseInt(duration % 60, 10);
 
@@ -16,12 +17,20 @@ function startTimer(duration) {
     console.log(`Time Remaining: ${minutes}:${seconds}`);
 
     --duration;
+    } else {
+      return;
+    }
   }, 1000);
 }
 
-rl.question('Please enter timer duration in minutes!', (minutes) => {
-  var time = parseInt(minutes, 10) * 60;
-  startTimer(time)
+    rl.question('Please enter timer duration FOR WORK in minutes! ', (minutes1) => {
+      var time = parseInt(minutes1, 10) * 60;
+      startTimer(time);
+      console.log(`Work Time: ${minutes1}`)
+    });
 
-  rl.close();
-});
+    rl.question('Please enter timer duration FOR BREAK in minutes! ', (minutes2) => {
+      var time = parseInt(minutes2, 10) * 60;
+      startTimer(time);
+      console.log(`Break Time: ${minutes2}`)
+    });
