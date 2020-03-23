@@ -5,21 +5,25 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-function minTommss(minutes) {
-  setInterval(function () {
-  var sign = minutes < 0 ? "-" : "";
-  var min = Math.floor(Math.abs(minutes));
-  var sec = Math.floor((Math.abs(minutes) * 60) % 60);
+function minTommss(duration) {
+  var intervalId = setInterval(function () {
+    if (duration >= 0) {
+      var min = Math.floor(duration / 60);
+      var sec = Math.floor(duration % 60);
 
-  console.log(sign + (min < 10 ? "0" : "") + min + ":" + (sec < 10 ? "0" : "") + sec);
+      console.log((min < 10 ? "0" : "") + min + ":" + (sec < 10 ? "0" : "") + sec);
 
+      --duration;
+    } else {
+      clearInterval(intervalId);
+    }
   }, 1000);
 }
 
 
 rl.question('Please enter timer duration in minutes!', (min) => {
-  // var time = parseInt(min, 10) * 60;
-  minTommss(min);
+  minTommss(min * 60);
 
   rl.close();
 });
+
