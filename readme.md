@@ -44,6 +44,10 @@ Finally as the timer reaches zero it will prompt the user that break time is ove
 >`BACK TO WORK! Please enter time for work and break.`  
 `Please enter timer duration FOR WORK in minutes!`
 
+Example of what it should look like
+
+![alt text](\static\images\pomodoro_running.png)
+
 # Built With
 
 - Node.js
