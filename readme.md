@@ -4,18 +4,18 @@ This is a node.js pomodoro timer that asks for a user input work time and break 
 
 # Getting Started
 
-These instructions will get you a copy of the project up and running on your loval machine for development and testing purposes.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ## Prerequisites
 
 What things you need to run this app
 
 - Node.js
-- Script Editor
+- Terminal
 
 ## Installing
 
-*need help here*
+Run `npm install` to install all dependencies
 
 # Running the Timer
 
@@ -51,4 +51,4 @@ Finally as the timer reaches zero it will prompt the user that break time is ove
 
 # Authors
 
-- Reed Terrell & Nathan DePriest
+- Nathan DePriest
