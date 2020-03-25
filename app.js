@@ -45,13 +45,14 @@ const question2 = () => {
 }
 
 const main = async () => {
-  await question1();
-  await question2();
-  await countdown(worktime);
-  console.log('BREAK TIME!');
-  await countdown(breaktime);
-  console.log('BACK TO WORK! Please enter time for work and break.');
-  
+  while (true) {
+    await question1();
+    await question2();
+    await countdown(worktime);
+    console.log('BREAK TIME!');
+    await countdown(breaktime);
+    console.log('BACK TO WORK! Please enter time for work and break.');
+  }
 }
 
 main();
