@@ -46,7 +46,7 @@ Finally as the timer reaches zero it will prompt the user that break time is ove
 
 Example of what it should look like
 
-![alt text](\static\images\pomodoro_running.png)
+![pomodoro_running](/static/images/pomodoro_running.png)
 
 # Built With
 
